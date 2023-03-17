@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays</title>
+</head>
+<body>
+<p id="arrays">Arrays</p>
+    <script>
+        // var cars=new Array('Swift','Baleno','Audi',100);
+        var courses=['HTML','CSS','JAVASCRIPT','REACT JS','NODE JS',89];    
+        console.log(courses);
+       //push Method its is used add new element in the last
+
+       courses.push('MY SQL');
+
+       console.log(courses);
+
+       console.log(courses.pop());  // it is used to remove last elements
+
+       console.log(courses);
+
+
+       courses.unshift('Web Techonologies');  // it will add the element in the first
+       
+       console.log(courses);
+
+       console.log(courses.shift()); - //it will remove the first elements
+
+       console.log(courses);
+
+
+       var indexvalue = courses.indexOf("NODE JS");
+
+       console.log("NODE JS Index of : " + indexvalue);
+
+       var from_to = courses.slice(0,4);
+
+       console.log(from_to);
+     
+     var numbers =[1,3,5,7,9,11,13,15];
+     document.getElementById('arrays').innerHTML=numbers[(3)];
+     console.log(numbers);
+
+     let mobile ={
+        Company:"VIVO",
+        Brand:'V9',
+        ROM:"64GB",
+        RAM:"4GB",
+     };
+     console.log(mobile.Company,mobile.Brand);
+
+
+    //  let fruits=['Apple','Orange','Guva','Mangoes'];
+
+    //  document.getElementById('arrays').innerHTML=fruits.push("Bananna","Veggies");
+
+    //  document.write(fruits);
+
+    //  document.getElementById('arrays').innerHTML=fruits.pop();
+     
+    //  document.write(fruits);
+
+
+    //  document.getElementById('arrays').innerHTML=fruits.unshift('Veggies');
+    //  document.writeln('/n' + fruits);
+
+    //  document.getElementById('arrays').innerHTML=fruits.shift();
+    //  document.writeln('/n' + fruits);
+
+
+
+// let vegtables = ["Carrot", "Potato", "Onion", "Radius"];
+
+// document.getElementById('arrays').innerHTML=vegtables;
+
+
+
+// document.getElementById('arrays').innerHTML=vegtables.slice(0,3);
+
+
+
+let num1 = [1,2,3,4,5,6,7,8,9]
+let num2 = num1.map(addittion);
+
+document.write(num2);
+
+function addittion(indexOf){
+    return indexOf * 2;
+}
+
+let names = [
+    {firstname:"Neela",  lastname:"Ranjith"},
+    {firstname:"Rajappa", lastname:"CMR"},
+    {firstname:"Bharthesh", lastname:"R"}
+];
+
+let fullname = names.map(getFullName);
+
+document.write(fullname);
+
+function getFullName(item){
+  return [item.firstname,item.lastname];
+}
+
+
+let no = [10,20,32,12,56,79.57]
+
+let below35 = no.some(below);
+
+document.write(below35);
+
+
+function below(value){
+    return value > 35;
+}
+
+
+
+
+let num5 = [1,2,3,4,5];
+let num7 = num5.fill(5,1,4);
+console.log(num7);
+
+
+
+let num9= [1, [2], [3, [[4]]],[5,6]] 
+console.log(num9.flat(3));
+
+let n =[1,5,6,7,8]
+let b=[-1,2,3,9,0]
+let total = n.concat(b);
+console.log(total);
+total.sort();
+console.log(total); 
+
+    </script>
+    
+</body>
+</html>

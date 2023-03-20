@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects</title>
+</head>
+<body>
+
+    <script>
+        let person ={
+            Name:'Ranjith',
+            Age:'23',
+            isWorking:true,
+            City:'Hosur'
+
+        };
+        console.log(person.Name,person.isWorking);
+
+
+
+        let Employee = {
+
+            name:"Ranjith",
+            age:23,
+            Exp:"2-yrs",
+            Salary:"25K",
+            Skills:['HTML','CSS','JS','Wordpress','MySql','React Js'],
+            Address: {
+                City:'Hosur',
+                State:'Tamilnadu'
+            },
+            EmployeeDetails: function (){
+            let details = `My name is ${this.name}, My age is ${this.age}, I have ${this.Exp} of Experience, and As of now my package is ${this.Salary}
+            , and My Skills are ${this.Skills}, and I am from ${this.Address.City},${this.Address.State} Thank you!!!`
+            console.log(details);
+        }
+        
+            
+        };
+       Employee.EmployeeDetails();
+
+
+       function createPerson(name,age,city){
+        return{
+            name,age,city,
+            persondetails: function(){
+                let details2 = `My name is ${this.name}, My age is ${this.age},  and from ${this.city}`;
+                console.log(details2);
+            }
+            
+
+        };
+       }
+       let Ranjith = createPerson('Ranjith',23,'Hosur');
+       let Priyanka = createPerson('Priyanka',24,'Bangalore');
+       Ranjith.persondetails();
+       Priyanka.persondetails();
+    </script>
+    
+</body>
+</html>

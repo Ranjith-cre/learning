@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promises</title>
+</head>
+<body>
+    <p id="fetchdata"></p>
+    <script>
+
+
+
+
+
+
+        // function prop(meeting){
+        //     return new Promise(function(resolve,reject){
+        //         console.log("Wait");
+        //         setTimeout(()=>{
+        //             if(meeting){
+        //         resolve('Succesfull')
+        //     }else{
+        //         reject('Unsuccesfull')
+        //     }
+
+        // },2000)}
+                    
+                    
+        //     )}
+           
+
+        // let success = (result) =>{
+        //     console.log(result);
+        // }
+        // let unsucces = (failed) =>{
+        //     console.log(failed);
+        // }
+        //  prop(true).then(success).catch(unsucces);
+
+
+
+
+
+        let fetchdataprom = () => {
+            fetch("https://jsonplaceholder.typicode.com/users")
+            .then(function(res){
+            return(res.json());
+            
+            })
+            .then(function(data){
+                console.log(data);
+
+            })
+        }      
+        fetchdataprom();
+
+
+
+        
+
+        // let  fetchdataasyn =  async function(){
+
+        //     let res = await fetch("https://jsonplaceholder.typicode.com/users")
+        //     let data = await res.json();
+
+        //     console.log(data);
+        // }
+        // fetchdataasyn();
+        
+    </script>
+</body>
+</html>
